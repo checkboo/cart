@@ -1,0 +1,12 @@
+<div>
+  <h1>Cheerio!</h1>
+  <ul>
+      <li ng-repeat="item in goods" class="thumbnail span3">
+        <img src="images/{{item.image}}" />
+        <p>{{item.name}}</p>
+        <p>{{item.description}}</p>
+        <p>{{item.price | currency}}</p>
+        <button class="btn btn-primary" ng-click="addToCart(item)">Buy</button>
+      </li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<div ng-controller="CartCtrl">
+  <h1>Cart</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Count</th>
+      <th>Total</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in items">
+      <td>{{goods[item.itemId].name}}</td>
+      <td>{{goods[item.itemId].price | currency}}</td>
+      <td>{{item.count}}</td>
+      <td>{{goods[item.itemId].price*item.count | currency}}</td>
+      <td><button class="btn btn-danger" ng-click="removeItem(item)">Remove</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
